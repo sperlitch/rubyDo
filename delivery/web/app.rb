@@ -3,6 +3,7 @@ require 'slim'
 require 'sequel'
 
 require_relative '../../app/actions/create_task'
+require_relative '../../app/actions/list_tasks'
 require_relative '../../external/task_jack'
 
 set :slim, :pretty => true
@@ -17,4 +18,10 @@ post '/:user/create-task' do
 	create_task = CreateTask.new TaskJack.new
 	@task = create_task.execute with_user_id: params[:user_id].to_i, and_text: params[:text]
 	redirect '/'
+end
+
+get '/' do
+	list_tasks = ListTasks.new TaskJack.new
+	@tasks = list_tasks.execute
+	slim :index
 end

@@ -16,6 +16,12 @@ class TaskJack_Default < TaskJackContract
   def save input
     { :user_id => 1, :text => 'make me a sandwich', :id => 1 }
   end
+
+	def list
+		[
+			{ user_id: 1, text: 'make me a sandwich', id: 1 }
+		]
+	end
     
 end
 

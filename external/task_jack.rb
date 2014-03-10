@@ -14,4 +14,8 @@ class TaskJack < TaskJackContract
 	def save input
 		@plug.save input
 	end
+
+	def list
+		@plug.list
+	end
 end

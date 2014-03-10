@@ -8,5 +8,10 @@
     "user_id": 1,
     "text": "make me an icecream sandwich",
     "id": 2
+  },
+  {
+    "user_id": 1,
+    "text": "make me an tuna sandwich",
+    "id": 3
   }
 ]

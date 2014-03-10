@@ -7,9 +7,11 @@ class Task < Obvious::Entity
   value :id, Fixnum
     
 	#def value name, type 
-	#	name = name.to_sym
-	#	@shape ||= {}
-	#	@shape[name] = type   
-	#	define_method(name) { @values[name] }
+	#	name = name.to_sym													=> text = text.sym
+	#	@shape ||= {}																=> @shape = {}
+	#	@shape[name] = type													=> @shape[:text] = String
+	#	define_method(name) { @values[name] }				=> define_method(:text) { @values[:text] }
 	#end
+	#
+	#
 end

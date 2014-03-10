@@ -1,0 +1,10 @@
+Action: CreateTask 
+Description: should create a task update
+Code:
+  - c: validate input
+  - c: set default id and values for new Task entity
+  - c: create/populate Task object
+    requires: Task.populate
+  - c: save task to jack
+    requires: TaskJack.save, Task.to_hash
+  - c: return the result 
